@@ -1,0 +1,105 @@
+/* Container for horizontal scrolling */
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 10px; /* Add some spacing around the container */
+  gap: 20px; /* Space between the cards */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 8px; /* Adjust the scrollbar height */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Blue scrollbar color */
+  border-radius: 4px; /* Rounded edges for scrollbar thumb */
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light gray track */
+}
+
+/* Individual card styling */
+.item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Fixed width for consistent scrolling */
+  flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.down-content {
+  padding: 15px;
+}
+
+.down-content h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.down-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.author-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.author-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* Button styling */
+.text-button-free,
+.text-button-pay {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #4756dd; /* Blue for all buttons */
+  transition: background-color 0.3s ease;
+}
+
+.text-button-free:hover,
+.text-button-pay:hover {
+  background-color: #007bff; /* Darker blue on hover */
+}
+
+.text-button-free i,
+.text-button-pay i {
+  margin-left: 5px;
+}
+
+/* Placeholder for no-course message */
+.no-course {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
